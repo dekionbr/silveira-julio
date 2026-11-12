@@ -2,7 +2,7 @@
 
 Site institucional e portfólio de **Julio Cesar Domingos da Silveira Jr.**, Backend Engineer com mais de 20 anos de experiência em .NET (C#), Node.js, Python e Go, APIs, microsserviços e sistemas de pagamento.
 
-🔗 **Acesse:** https://dekionbr.github.io/silveira-julio/
+🔗 **Acesse:** https://silveirajulio.com.br
 
 Desenvolvido em **HTML, CSS e JavaScript puros**, sem frameworks, bibliotecas ou etapa de build.
 
@@ -54,7 +54,7 @@ python3 -m http.server 8080
 
 ## Publicação
 
-O site é publicado pelo **GitHub Pages** a partir do branch `gh-pages`. Para atualizar, envie as alterações para esse branch:
+O site é publicado pelo **GitHub Pages** a partir do branch `gh-pages`, no domínio próprio **silveirajulio.com.br** (definido no arquivo `CNAME`, que deve existir em todos os branches publicados). Para atualizar, envie as alterações para esse branch:
 
 ```bash
 git push origin HEAD:gh-pages
