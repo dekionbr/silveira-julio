@@ -5,55 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Julio Silveira — Senior Software Engineer</title>
   <meta name="description" content="Julio Cesar Silveira — Desenvolvedor Fullstack Sênior com quase 20 anos de experiência em .NET/C#, soluções de pagamento, APIs e aplicações web.">
-  <meta name="theme-color" content="#0a0908">
+  <meta name="theme-color" content="#060c1a">
   <meta property="og:title" content="Julio Silveira — Senior Software Engineer">
-  <meta property="og:description" content="Quase 20 anos construindo software: pagamentos, backoffice, APIs e web.">
+  <meta property="og:description" content="Engenharia de software para sistemas críticos: pagamentos, backoffice, APIs e aplicações web.">
   <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%230a0908'/><text x='50%' y='58%' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-size='38' fill='%23e8b26a'>JS</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230a1530'/><text x='50%' y='56%' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='30' fill='%237fb0ff'>JS</text></svg>">
+  <script>
+    // aplica o tema antes da renderização para evitar "piscar"
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") {
+        t = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      }
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300;1,9..144,500&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="is-loading">
 
-  <!-- ============ FILM LEADER (LOADER) ============ -->
-  <div class="leader" id="leader" aria-hidden="true">
-    <div class="leader__ring">
-      <svg viewBox="0 0 200 200">
-        <circle cx="100" cy="100" r="88" class="leader__circle"/>
-        <circle cx="100" cy="100" r="70" class="leader__circle leader__circle--inner"/>
-        <line x1="100" y1="0" x2="100" y2="200"/>
-        <line x1="0" y1="100" x2="200" y2="100"/>
-        <circle cx="100" cy="100" r="88" class="leader__sweep" id="leaderSweep"/>
-      </svg>
-      <span class="leader__num" id="leaderNum">3</span>
-    </div>
-    <p class="leader__caption">Silveira Studio &nbsp;·&nbsp; Rolo 01</p>
+  <!-- ============ INTRO ============ -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <span class="intro__mark">J<span>/</span>S</span>
+    <span class="intro__bar"><i></i></span>
   </div>
 
-  <!-- letterbox bars -->
-  <div class="letterbox letterbox--top" aria-hidden="true"></div>
-  <div class="letterbox letterbox--bottom" aria-hidden="true"></div>
-
-  <!-- overlays -->
-  <div class="grain" aria-hidden="true"></div>
-  <div class="vignette" aria-hidden="true"></div>
   <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__label" id="cursorLabel"></span></div>
 
   <!-- ============ HEADER ============ -->
   <header class="header" id="header">
-    <a href="#top" class="header__logo" data-cursor="topo">J<span>/</span>S</a>
+    <a href="#top" class="header__logo" aria-label="Início">J<span>/</span>S</a>
     <nav class="header__nav" id="nav" aria-label="Navegação principal">
       <a href="#sobre"><em>01</em> Sobre</a>
-      <a href="#trajetoria"><em>02</em> Trajetória</a>
-      <a href="#stack"><em>03</em> Stack</a>
-      <a href="#portfolio"><em>04</em> Portfólio</a>
+      <a href="#experiencia"><em>02</em> Experiência</a>
+      <a href="#competencias"><em>03</em> Competências</a>
+      <a href="#projetos"><em>04</em> Projetos</a>
       <a href="#formacao"><em>05</em> Formação</a>
       <a href="#contato"><em>06</em> Contato</a>
     </nav>
-    <div class="header__rec"><i></i> REC <span id="timecode">00:00:00:00</span></div>
-    <button class="header__menu" id="menuBtn" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="header__actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></svg>
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+      </button>
+      <button class="header__menu" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
   </header>
 
   <main id="top">
@@ -63,33 +63,33 @@
       <div class="hero__light" aria-hidden="true">
         <span class="beam beam--1"></span>
         <span class="beam beam--2"></span>
-        <span class="beam beam--3"></span>
+        <span class="hero__grid"></span>
       </div>
       <div class="hero__spot" id="heroSpot" aria-hidden="true"></div>
 
       <div class="hero__meta hero__meta--tl">
         <span>Rio de Janeiro, RJ</span>
-        <span>22°54′S 43°12′W</span>
+        <span>Brasil</span>
       </div>
       <div class="hero__meta hero__meta--tr">
-        <span>Em cartaz desde</span>
-        <span>2005 — hoje</span>
+        <span>Atuação profissional</span>
+        <span>desde 2007</span>
       </div>
 
       <div class="hero__content">
-        <p class="hero__pre"><span class="reveal-line">Uma produção de quase 20 anos em tecnologia</span></p>
+        <p class="hero__pre"><span class="reveal-line">Senior Software Engineer · Fullstack</span></p>
         <h1 class="hero__title" aria-label="Julio Silveira">
           <span class="hero__row"><span class="hero__word" data-split>Julio</span></span>
-          <span class="hero__row hero__row--indent"><span class="hero__word hero__word--italic" data-split>Silveira</span></span>
+          <span class="hero__row hero__row--indent"><span class="hero__word hero__word--accent" data-split>Silveira</span></span>
         </h1>
         <div class="hero__sub">
-          <p>Senior Software Engineer<br>& Desenvolvedor Fullstack</p>
+          <p>Engenharia de software para sistemas críticos de negócio — pagamentos, backoffice e aplicações web.</p>
           <p class="hero__tags">.NET / C# &nbsp;·&nbsp; Pagamentos &nbsp;·&nbsp; APIs &nbsp;·&nbsp; Web</p>
         </div>
       </div>
 
       <a href="#sobre" class="hero__scroll" data-cursor="rolar">
-        <span>Role para começar</span>
+        <span>Saiba mais</span>
         <i></i>
       </a>
     </section>
@@ -97,27 +97,27 @@
     <!-- ============ MARQUEE ============ -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
-        <span>Fintech</span><b>✦</b><span>Pinpad &amp; PDV</span><b>✦</b><span>Backoffice</span><b>✦</b><span>APIs RESTful</span><b>✦</b><span>Arquitetura</span><b>✦</b><span>Angular · React · Vue</span><b>✦</b>
-        <span>Fintech</span><b>✦</b><span>Pinpad &amp; PDV</span><b>✦</b><span>Backoffice</span><b>✦</b><span>APIs RESTful</span><b>✦</b><span>Arquitetura</span><b>✦</b><span>Angular · React · Vue</span><b>✦</b>
+        <span>Fintech</span><b>◆</b><span>Pinpad &amp; PDV</span><b>◆</b><span>Backoffice</span><b>◆</b><span>APIs RESTful</span><b>◆</b><span>Arquitetura</span><b>◆</b><span>Angular · React · Vue</span><b>◆</b>
+        <span>Fintech</span><b>◆</b><span>Pinpad &amp; PDV</span><b>◆</b><span>Backoffice</span><b>◆</b><span>APIs RESTful</span><b>◆</b><span>Arquitetura</span><b>◆</b><span>Angular · React · Vue</span><b>◆</b>
       </div>
     </div>
 
     <!-- ============ SOBRE ============ -->
-    <section class="scene about" id="sobre">
-      <header class="scene__head">
-        <span class="scene__num">Cena 01</span>
-        <span class="scene__rule"></span>
-        <span class="scene__name">O protagonista</span>
+    <section class="section about" id="sobre">
+      <header class="section__head">
+        <span class="section__num">01</span>
+        <span class="section__rule"></span>
+        <span class="section__name">Perfil profissional</span>
       </header>
 
       <div class="about__grid">
         <p class="about__lead" data-words>
-          Desenvolvedor Fullstack Sênior com quase vinte anos de estrada — do primeiro servidor web à captura de pagamentos em escala nacional.
+          Desenvolvedor Fullstack Sênior com quase 20 anos de experiência no mercado de tecnologia, com forte atuação no ecossistema .NET/C# e em soluções de pagamento.
         </p>
 
         <div class="about__body">
-          <p class="fade-up">Trajetória construída em empresas de diferentes segmentos — <strong>fintechs, investimentos, CRM e desenvolvimento web</strong> — com forte atuação no ecossistema .NET/C# e, mais recentemente, em soluções de pagamento e sistemas backoffice críticos para o negócio.</p>
-          <p class="fade-up">Experiência em análise, arquitetura e desenvolvimento de APIs RESTful, aplicações web em Angular, React e Vue e sistemas embarcados de pagamento (Pinpad). Também coordenei equipes técnicas e mantive infraestrutura de servidores.</p>
+          <p class="fade-up">Trajetória construída em empresas de diferentes segmentos — <strong>fintechs, investimentos, CRM e desenvolvimento web</strong> — com atuação recente em soluções de pagamento e sistemas de backoffice críticos para o negócio.</p>
+          <p class="fade-up">Experiência em análise, arquitetura e desenvolvimento de APIs RESTful, aplicações web (Angular, React e Vue) e sistemas embarcados de pagamento (Pinpad), além da coordenação de equipes técnicas e da manutenção da infraestrutura de servidores.</p>
           <p class="fade-up about__sign">Perfil orientado a entregas, integração de sistemas e melhoria contínua de soluções em produção.</p>
         </div>
       </div>
@@ -129,11 +129,11 @@
         </div>
         <div class="stat fade-up">
           <span class="stat__num" data-count="7">0</span>
-          <span class="stat__label">empresas, de agência a fintech</span>
+          <span class="stat__label">empresas de diferentes segmentos</span>
         </div>
         <div class="stat fade-up">
           <span class="stat__num" data-count="5" data-suffix="+">0</span>
-          <span class="stat__label">anos em pagamentos no mundo físico</span>
+          <span class="stat__label">anos em meios de pagamento</span>
         </div>
         <div class="stat fade-up">
           <span class="stat__num" data-count="8">0</span>
@@ -142,112 +142,105 @@
       </div>
     </section>
 
-    <!-- ============ TRAJETÓRIA (horizontal) ============ -->
-    <section class="journey" id="trajetoria">
+    <!-- ============ EXPERIÊNCIA (horizontal) ============ -->
+    <section class="journey" id="experiencia">
       <div class="journey__sticky">
-        <header class="scene__head scene__head--journey">
-          <span class="scene__num">Cena 02</span>
-          <span class="scene__rule"></span>
-          <span class="scene__name">A trajetória</span>
+        <header class="section__head section__head--journey">
+          <span class="section__num">02</span>
+          <span class="section__rule"></span>
+          <span class="section__name">Experiência profissional</span>
           <span class="journey__progress"><i id="journeyBar"></i></span>
         </header>
 
         <div class="journey__track" id="journeyTrack">
 
-          <article class="frame frame--intro">
-            <h2 class="frame__headline">Sete<br><em>capítulos,</em><br>uma carreira.</h2>
-            <p class="frame__hint">Arraste o roteiro rolando a página →</p>
+          <article class="card-xp card-xp--intro">
+            <h2 class="card-xp__headline">Quase<br><em>duas décadas</em><br>de atuação.</h2>
+            <p class="card-xp__hint">Role a página para navegar →</p>
           </article>
 
-          <article class="frame" data-cursor="ver">
-            <div class="frame__perf" aria-hidden="true"></div>
-            <span class="frame__year">2026 — Atual</span>
-            <h3 class="frame__company">Etalent</h3>
-            <p class="frame__role">Senior Software Engineer</p>
-            <p class="frame__text">Boas práticas de engenharia de software, arquitetura de soluções e desenvolvimento fullstack.</p>
-            <a class="frame__link" href="https://etalent.com.br" target="_blank" rel="noopener">etalent.com.br ↗</a>
-            <span class="frame__badge">Em cartaz</span>
+          <article class="card-xp">
+            <span class="card-xp__year">Jul/2026 — Atual</span>
+            <h3 class="card-xp__company">Etalent</h3>
+            <p class="card-xp__role">Senior Software Engineer</p>
+            <p class="card-xp__text">Aplicação de boas práticas de engenharia de software, arquitetura de soluções e desenvolvimento fullstack.</p>
+            <a class="card-xp__link" href="https://etalent.com.br" target="_blank" rel="noopener" data-cursor="abrir">etalent.com.br ↗</a>
+            <span class="card-xp__badge">Atual</span>
           </article>
 
-          <article class="frame" data-cursor="ver">
-            <div class="frame__perf" aria-hidden="true"></div>
-            <span class="frame__year">2021 — 2026</span>
-            <h3 class="frame__company">Stone Co.</h3>
-            <p class="frame__role">Senior Software Engineer</p>
-            <p class="frame__text">Soluções de pagamento para o mundo físico com foco em dispositivos Pinpad em automações e PDVs. Evolução de funcionalidades críticas de captura e processamento de pagamentos — estabilidade, performance e segurança em escala nacional.</p>
-            <a class="frame__link" href="https://www.stone.com.br/" target="_blank" rel="noopener">stone.com.br ↗</a>
+          <article class="card-xp">
+            <span class="card-xp__year">2021 — Mar/2026</span>
+            <h3 class="card-xp__company">Stone Co.</h3>
+            <p class="card-xp__role">Senior Software Engineer</p>
+            <p class="card-xp__text">Desenvolvimento e manutenção de soluções de pagamento para o mundo físico, com foco em dispositivos Pinpad para automações e PDVs. Evolução de funcionalidades críticas de captura e processamento de pagamentos, com estabilidade, performance e segurança em escala nacional.</p>
+            <a class="card-xp__link" href="https://www.stone.com.br/" target="_blank" rel="noopener" data-cursor="abrir">stone.com.br ↗</a>
           </article>
 
-          <article class="frame" data-cursor="ver">
-            <div class="frame__perf" aria-hidden="true"></div>
-            <span class="frame__year">2019 — 2021</span>
-            <h3 class="frame__company">Órama</h3>
-            <p class="frame__role">Desenvolvedor .NET e Python Sênior</p>
-            <p class="frame__text">Sistemas backoffice em .NET e Python para as operações internas da corretora: automação de processos e integração de dados para gestão de investimentos.</p>
-            <a class="frame__link" href="https://www.orama.com.br/" target="_blank" rel="noopener">orama.com.br ↗</a>
+          <article class="card-xp">
+            <span class="card-xp__year">2019 — 2021</span>
+            <h3 class="card-xp__company">Órama</h3>
+            <p class="card-xp__role">Desenvolvedor .NET e Python Sênior</p>
+            <p class="card-xp__text">Sistemas de backoffice em .NET e Python para as operações internas da corretora, incluindo automação de processos e integração de dados para gestão de investimentos.</p>
+            <a class="card-xp__link" href="https://www.orama.com.br/" target="_blank" rel="noopener" data-cursor="abrir">orama.com.br ↗</a>
           </article>
 
-          <article class="frame" data-cursor="ver">
-            <div class="frame__perf" aria-hidden="true"></div>
-            <span class="frame__year">2018 — 2019</span>
-            <h3 class="frame__company">FullLab</h3>
-            <p class="frame__role">Desenvolvedor Fullstack Pleno</p>
-            <p class="frame__text">Projetos em .NET, JavaScript e Ruby: APIs RESTful para apps mobile e SPAs em Angular, React e Vue para diferentes clientes.</p>
-            <a class="frame__link" href="http://www.fulllab.com.br/" target="_blank" rel="noopener">fulllab.com.br ↗</a>
+          <article class="card-xp">
+            <span class="card-xp__year">2018 — 2019</span>
+            <h3 class="card-xp__company">FullLab</h3>
+            <p class="card-xp__role">Desenvolvedor Fullstack Pleno</p>
+            <p class="card-xp__text">Projetos em .NET, JavaScript e Ruby: APIs RESTful para integração com aplicativos móveis e SPAs em Angular, React e Vue para diferentes clientes.</p>
+            <a class="card-xp__link" href="http://www.fulllab.com.br/" target="_blank" rel="noopener" data-cursor="abrir">fulllab.com.br ↗</a>
           </article>
 
-          <article class="frame" data-cursor="ver">
-            <div class="frame__perf" aria-hidden="true"></div>
-            <span class="frame__year">2016 — 2018</span>
-            <h3 class="frame__company">CMCorp</h3>
-            <p class="frame__role">Analista Desenvolvedor Pleno</p>
-            <p class="frame__text">Módulos de CRM com .NET Framework 4.5+, C#, WebForms, MVC, WebAPI e WCF, evoluindo soluções de relacionamento com clientes.</p>
-            <a class="frame__link" href="http://www.cmcorp.com.br/" target="_blank" rel="noopener">cmcorp.com.br ↗</a>
+          <article class="card-xp">
+            <span class="card-xp__year">2016 — 2018</span>
+            <h3 class="card-xp__company">CMCorp Soluções</h3>
+            <p class="card-xp__role">Analista Desenvolvedor Pleno</p>
+            <p class="card-xp__text">Módulos de CRM com .NET Framework 4.5+, C#, WebForms, MVC, WebAPI e WCF, contribuindo para a evolução de soluções de relacionamento com clientes.</p>
+            <a class="card-xp__link" href="http://www.cmcorp.com.br/" target="_blank" rel="noopener" data-cursor="abrir">cmcorp.com.br ↗</a>
           </article>
 
-          <article class="frame" data-cursor="ver">
-            <div class="frame__perf" aria-hidden="true"></div>
-            <span class="frame__year">2013 — 2015</span>
-            <h3 class="frame__company">Grupo J3</h3>
-            <p class="frame__role">Analista de Sistemas</p>
-            <p class="frame__text">Sistemas de extranet e B2B para o transporte rodoviário, integrando sistemas internos e parceiros com .NET, C#, MVC e WebAPI.</p>
-            <a class="frame__link" href="http://grupoj3.com.br/" target="_blank" rel="noopener">grupoj3.com.br ↗</a>
+          <article class="card-xp">
+            <span class="card-xp__year">2013 — 2015</span>
+            <h3 class="card-xp__company">Grupo J3</h3>
+            <p class="card-xp__role">Analista de Sistemas</p>
+            <p class="card-xp__text">Sistemas de extranet e B2B para o setor de transporte rodoviário, com integração entre sistemas internos e parceiros, utilizando .NET, C#, MVC e WebAPI.</p>
+            <a class="card-xp__link" href="http://grupoj3.com.br/" target="_blank" rel="noopener" data-cursor="abrir">grupoj3.com.br ↗</a>
           </article>
 
-          <article class="frame" data-cursor="ver">
-            <div class="frame__perf" aria-hidden="true"></div>
-            <span class="frame__year">2007 — 2013</span>
-            <h3 class="frame__company">Oficina Interativa</h3>
-            <p class="frame__role">Fullstack Pleno · Coordenação de equipe</p>
-            <p class="frame__text">Manutenção de servidores web, sites e sistemas, planejamento de produtos e orientação técnica de desenvolvedores. .NET (C# e VB), PHP, MVC, WebAPI e WebForms.</p>
-            <a class="frame__link" href="http://oficinarj.com.br/" target="_blank" rel="noopener">oficinarj.com.br ↗</a>
+          <article class="card-xp">
+            <span class="card-xp__year">2007 — 2013</span>
+            <h3 class="card-xp__company">Oficina Interativa</h3>
+            <p class="card-xp__role">Desenvolvedor Fullstack Pleno · Coordenação de equipe</p>
+            <p class="card-xp__text">Manutenção de servidores web, desenvolvimento de sites e sistemas, apoio ao planejamento de novos produtos e orientação técnica de desenvolvedores. .NET (C# e VB), PHP, MVC, WebAPI e WebForms.</p>
+            <a class="card-xp__link" href="http://oficinarj.com.br/" target="_blank" rel="noopener" data-cursor="abrir">oficinarj.com.br ↗</a>
           </article>
 
-          <article class="frame frame--end">
-            <span class="frame__year">2005</span>
-            <h2 class="frame__headline">Onde<br><em>tudo</em><br>começou.</h2>
-            <p class="frame__text">Técnico em informática pela FAETEC.</p>
+          <article class="card-xp card-xp--end">
+            <span class="card-xp__year">2005</span>
+            <h2 class="card-xp__headline">Formação<br><em>técnica</em><br>em informática.</h2>
+            <p class="card-xp__text">Escola Técnica Estadual Santa Cruz / FAETEC.</p>
           </article>
 
         </div>
       </div>
     </section>
 
-    <!-- ============ STACK ============ -->
-    <section class="scene stack" id="stack">
-      <header class="scene__head">
-        <span class="scene__num">Cena 03</span>
-        <span class="scene__rule"></span>
-        <span class="scene__name">O elenco técnico</span>
+    <!-- ============ COMPETÊNCIAS ============ -->
+    <section class="section stack" id="competencias">
+      <header class="section__head">
+        <span class="section__num">03</span>
+        <span class="section__rule"></span>
+        <span class="section__name">Competências</span>
       </header>
 
-      <h2 class="scene__title" data-words>As ferramentas que dão vida às histórias.</h2>
+      <h2 class="section__title" data-words>Tecnologias e domínios de atuação.</h2>
 
-      <div class="cast">
-        <div class="cast__col fade-up">
+      <div class="skills">
+        <div class="skills__col fade-up">
           <h4>Back-end</h4>
           <ul>
-            <li>C# <span>protagonista</span></li>
+            <li>C# <span>principal</span></li>
             <li>.NET / .NET Core</li>
             <li>ASP.NET MVC · WebAPI</li>
             <li>WebForms · WCF</li>
@@ -255,10 +248,10 @@
             <li>Ruby · PHP · VB.NET</li>
           </ul>
         </div>
-        <div class="cast__col fade-up">
+        <div class="skills__col fade-up">
           <h4>Front-end</h4>
           <ul>
-            <li>Angular <span>coadjuvante</span></li>
+            <li>Angular</li>
             <li>React</li>
             <li>Vue</li>
             <li>JavaScript</li>
@@ -266,7 +259,7 @@
             <li>WordPress</li>
           </ul>
         </div>
-        <div class="cast__col fade-up">
+        <div class="skills__col fade-up">
           <h4>Domínios</h4>
           <ul>
             <li>Pagamentos · Pinpad <span>especialidade</span></li>
@@ -277,29 +270,29 @@
             <li>SEO &amp; Web Analytics</li>
           </ul>
         </div>
-        <div class="cast__col fade-up">
-          <h4>Bastidores</h4>
+        <div class="skills__col fade-up">
+          <h4>Gestão &amp; arquitetura</h4>
           <ul>
             <li>Arquitetura de soluções</li>
             <li>APIs RESTful</li>
-            <li>Servidores web</li>
+            <li>Infraestrutura de servidores web</li>
             <li>Coordenação de equipes</li>
-            <li>Mentoria técnica</li>
+            <li>Orientação técnica</li>
             <li>Melhoria contínua</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- ============ PORTFOLIO ============ -->
-    <section class="scene work" id="portfolio">
-      <header class="scene__head">
-        <span class="scene__num">Cena 04</span>
-        <span class="scene__rule"></span>
-        <span class="scene__name">Filmografia</span>
+    <!-- ============ PROJETOS ============ -->
+    <section class="section work" id="projetos">
+      <header class="section__head">
+        <span class="section__num">04</span>
+        <span class="section__rule"></span>
+        <span class="section__name">Projetos selecionados</span>
       </header>
 
-      <h2 class="scene__title" data-words>Projetos que passaram pela minha câmera.</h2>
+      <h2 class="section__title" data-words>Projetos web desenvolvidos e mantidos ao longo da carreira.</h2>
 
       <div class="work__preview" id="workPreview" aria-hidden="true">
         <span class="work__preview-tag" id="workPreviewTag"></span>
@@ -307,7 +300,7 @@
       </div>
 
       <ol class="work__list" id="workList">
-        <li class="work__item" data-hue="28" data-tag="ASP.NET 3.5 WebForms">
+        <li class="work__item" data-hue="215" data-tag="ASP.NET 3.5 WebForms">
           <a href="http://www.joaofortes.com.br/" target="_blank" rel="noopener" data-cursor="abrir">
             <span class="work__idx">01</span>
             <span class="work__name">João Fortes</span>
@@ -315,7 +308,7 @@
             <span class="work__arrow">↗</span>
           </a>
         </li>
-        <li class="work__item" data-hue="200" data-tag="Integrações · Extranet">
+        <li class="work__item" data-hue="195" data-tag="Integrações · Extranet">
           <a href="http://extranet.sergiocastro.com.br/" target="_blank" rel="noopener" data-cursor="abrir">
             <span class="work__idx">02</span>
             <span class="work__name">Sergio Castro Imóveis</span>
@@ -323,7 +316,7 @@
             <span class="work__arrow">↗</span>
           </a>
         </li>
-        <li class="work__item" data-hue="350" data-tag="WordPress">
+        <li class="work__item" data-hue="235" data-tag="WordPress">
           <a href="http://facesg.edu.br/" target="_blank" rel="noopener" data-cursor="abrir">
             <span class="work__idx">03</span>
             <span class="work__name">Faculdade Cesgranrio</span>
@@ -331,7 +324,7 @@
             <span class="work__arrow">↗</span>
           </a>
         </li>
-        <li class="work__item" data-hue="140" data-tag="Tema WordPress do zero">
+        <li class="work__item" data-hue="175" data-tag="Tema WordPress próprio">
           <a href="http://www.extremeecoadventure.com.br" target="_blank" rel="noopener" data-cursor="abrir">
             <span class="work__idx">04</span>
             <span class="work__name">Extreme Eco Adventure</span>
@@ -339,7 +332,7 @@
             <span class="work__arrow">↗</span>
           </a>
         </li>
-        <li class="work__item" data-hue="45" data-tag="Tema WordPress do zero">
+        <li class="work__item" data-hue="205" data-tag="Tema WordPress próprio">
           <a href="http://www.qualitaturismo.com.br/" target="_blank" rel="noopener" data-cursor="abrir">
             <span class="work__idx">05</span>
             <span class="work__name">Qualitá Turismo</span>
@@ -347,7 +340,7 @@
             <span class="work__arrow">↗</span>
           </a>
         </li>
-        <li class="work__item" data-hue="10" data-tag="Manutenção · Adaptações">
+        <li class="work__item" data-hue="250" data-tag="Manutenção · Adaptações">
           <a href="https://churrasconet.com.br/" target="_blank" rel="noopener" data-cursor="abrir">
             <span class="work__idx">06</span>
             <span class="work__name">Churrasconet</span>
@@ -355,7 +348,7 @@
             <span class="work__arrow">↗</span>
           </a>
         </li>
-        <li class="work__item" data-hue="260" data-tag="Implantação">
+        <li class="work__item" data-hue="225" data-tag="Implantação">
           <a href="http://wsiconsultoria.com/" target="_blank" rel="noopener" data-cursor="abrir">
             <span class="work__idx">07</span>
             <span class="work__name">WSI Consultoria</span>
@@ -363,7 +356,7 @@
             <span class="work__arrow">↗</span>
           </a>
         </li>
-        <li class="work__item" data-hue="180" data-tag="Implantação">
+        <li class="work__item" data-hue="185" data-tag="Implantação">
           <a href="http://www.wsibestinternet.com.br/" target="_blank" rel="noopener" data-cursor="abrir">
             <span class="work__idx">08</span>
             <span class="work__name">WSI Best Internet</span>
@@ -375,16 +368,16 @@
     </section>
 
     <!-- ============ FORMAÇÃO ============ -->
-    <section class="scene edu" id="formacao">
-      <header class="scene__head">
-        <span class="scene__num">Cena 05</span>
-        <span class="scene__rule"></span>
-        <span class="scene__name">Bastidores &amp; prêmios</span>
+    <section class="section edu" id="formacao">
+      <header class="section__head">
+        <span class="section__num">05</span>
+        <span class="section__rule"></span>
+        <span class="section__name">Formação &amp; certificações</span>
       </header>
 
       <div class="edu__grid">
         <div class="edu__block">
-          <h4 class="edu__label">Formação</h4>
+          <h4 class="edu__label">Formação acadêmica</h4>
           <div class="card fade-up">
             <span class="card__year">2017</span>
             <h3>Sistemas de Informação</h3>
@@ -398,8 +391,8 @@
         </div>
 
         <div class="edu__block">
-          <h4 class="edu__label">Certificados</h4>
-          <div class="card card--award fade-up">
+          <h4 class="edu__label">Certificações</h4>
+          <div class="card card--featured fade-up">
             <span class="card__year">2018</span>
             <h3>ASP.NET Core e Angular 5</h3>
             <p>Eduardo Pires — Treinamento e Consultoria · 60 horas</p>
@@ -418,11 +411,11 @@
         </div>
 
         <div class="edu__block">
-          <h4 class="edu__label">Palco</h4>
-          <div class="card card--stage fade-up">
+          <h4 class="edu__label">Palestras</h4>
+          <div class="card fade-up">
             <span class="card__year">2010</span>
-            <h3>Palestra no CoéSEO</h3>
-            <p>Expansão dos conhecimentos de SEO: por que ~80% dos cliques ficam nos três primeiros resultados de busca — e como chegar lá.</p>
+            <h3>CoéSEO</h3>
+            <p>Palestra sobre a importância do SEO: cerca de 80% dos cliques em buscas ficam entre os três primeiros resultados, o que torna estratégico investir em posicionamento.</p>
           </div>
 
           <h4 class="edu__label">Aprendizado contínuo</h4>
@@ -436,36 +429,36 @@
       </div>
     </section>
 
-    <!-- ============ CONTATO / CRÉDITOS ============ -->
-    <section class="credits" id="contato">
-      <div class="credits__glow" aria-hidden="true"></div>
-      <header class="scene__head">
-        <span class="scene__num">Cena 06</span>
-        <span class="scene__rule"></span>
-        <span class="scene__name">Créditos finais</span>
+    <!-- ============ CONTATO ============ -->
+    <section class="contact" id="contato">
+      <div class="contact__glow" aria-hidden="true"></div>
+      <header class="section__head">
+        <span class="section__num">06</span>
+        <span class="section__rule"></span>
+        <span class="section__name">Contato</span>
       </header>
 
-      <h2 class="credits__title">
-        <span class="hero__row"><span data-split>Vamos rodar</span></span>
-        <span class="hero__row"><em data-split>a próxima cena?</em></span>
+      <h2 class="contact__title">
+        <span class="hero__row"><span data-split>Vamos conversar</span></span>
+        <span class="hero__row"><em data-split>sobre o seu projeto?</em></span>
       </h2>
 
-      <a class="credits__mail" href="mailto:silveira.julio@gmail.com" data-cursor="escrever">
+      <a class="contact__mail" href="mailto:silveira.julio@gmail.com" data-cursor="e-mail">
         silveira.julio@gmail.com
       </a>
 
-      <dl class="credits__roll">
-        <div><dt>Direção &amp; código</dt><dd>Julio Cesar Domingos da Silveira Jr.</dd></div>
+      <dl class="contact__list">
+        <div><dt>Nome</dt><dd>Julio Cesar Domingos da Silveira Jr.</dd></div>
         <div><dt>LinkedIn</dt><dd><a href="https://br.linkedin.com/in/julio-silveira-08314526" target="_blank" rel="noopener" data-cursor="abrir">/julio-silveira ↗</a></dd></div>
         <div><dt>GitHub</dt><dd><a href="https://github.com/dekionbr" target="_blank" rel="noopener" data-cursor="abrir">@dekionbr ↗</a></dd></div>
         <div><dt>WhatsApp</dt><dd><a href="https://wa.me/5521980093106" target="_blank" rel="noopener" data-cursor="conversar">+55 21 9 8009-3106 ↗</a></dd></div>
-        <div><dt>Locação</dt><dd>Rio de Janeiro, Brasil</dd></div>
+        <div><dt>Localização</dt><dd>Rio de Janeiro, Brasil</dd></div>
       </dl>
 
-      <footer class="credits__end">
-        <span>Feito à mão em HTML, CSS &amp; JavaScript puro</span>
-        <span class="credits__fim">Fim.</span>
-        <span>© <span id="year">2026</span> Julio Silveira</span>
+      <footer class="footer">
+        <span>© <span id="year">2026</span> Julio Silveira. Todos os direitos reservados.</span>
+        <a href="#top" class="footer__top" data-cursor="topo">Voltar ao topo ↑</a>
+        <span>Desenvolvido em HTML, CSS &amp; JavaScript</span>
       </footer>
     </section>
 
