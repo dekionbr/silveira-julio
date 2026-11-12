@@ -373,6 +373,9 @@ body.is-ready .hero__sub { opacity: 1; transform: none; }
 }
 .card-xp.is-in .card-xp__mark { opacity: .07; transform: none; }
 .card-xp:hover .card-xp__mark { opacity: .14; color: var(--accent); }
+/* ícone do segmento (usado enquanto não houver logo oficial) */
+.card-xp__mark--icon svg { height: 100%; width: auto; max-width: 100%; stroke-width: 1.1; }
+.card-xp__mark--icon { padding: 6% 6% 6% 6%; }
 /* logo oficial: defina --logo: url(assets/logos/arquivo.svg) no elemento; a cor segue o tema */
 .card-xp__mark--logo {
   font-size: 0; background: currentColor;
