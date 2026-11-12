@@ -6,16 +6,16 @@ Feito em **HTML, CSS e JavaScript puro**, sem frameworks nem etapa de build.
 
 ## Conceito
 
-Design cinematográfico, como um filme em cenas:
+Visual institucional em azul-marinho, com animações suaves de entrada e rolagem:
 
-- **Abertura**: contagem regressiva de película (3·2·1) e barras de *letterbox* que se abrem
-- **Grão de filme** e vinheta sobre toda a página, com feixes de luz no hero
-- **Cena 01 – Sobre**: texto que "acende" palavra por palavra ao rolar e números animados
-- **Cena 02 – Trajetória**: linha do tempo horizontal fixada na rolagem (vertical no celular)
-- **Cena 03 – Stack**: o "elenco técnico"
-- **Cena 04 – Filmografia**: projetos com prévia flutuante que segue o cursor
-- **Cena 05 – Formação, certificados e palestra**
-- **Cena 06 – Créditos finais**: contato
+- **Tema escuro e claro**: botão no cabeçalho; a escolha fica salva no navegador e, sem escolha, segue o tema do sistema
+- **Início**: apresentação com nome, cargo e áreas de atuação
+- **01 – Sobre**: perfil profissional e números de destaque
+- **02 – Experiência**: linha do tempo horizontal fixada na rolagem (vertical no celular)
+- **03 – Competências**: tecnologias, domínios e gestão
+- **04 – Projetos**: projetos web com prévia que segue o cursor
+- **05 – Formação & certificações**, incluindo palestra
+- **06 – Contato**
 
 Respeita `prefers-reduced-motion` e é responsivo.
 
@@ -38,4 +38,4 @@ python3 -m http.server 8080
 
 ## Publicação
 
-Por ser estático, pode ser publicado diretamente no **GitHub Pages** (Settings → Pages → branch `master`, pasta `/root`), Netlify ou Vercel.
+Publicado no **GitHub Pages** a partir do branch `gh-pages`: https://dekionbr.github.io/silveira-julio/
