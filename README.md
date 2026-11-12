@@ -50,7 +50,7 @@ python3 -m http.server 8080
 - **Textos**: todo o conteúdo está em `index.html`.
 - **Cores**: as variáveis de cada tema ficam no início de `css/style.css`, em `:root[data-theme="dark"]` e `:root[data-theme="light"]`.
 - **Logos das empresas** (marca d'água nos cards de experiência): salve em `assets/logos/` uma silhueta com fundo transparente (SVG ou PNG grande) e, no `index.html`, troque o `<span class="card-xp__mark">` da empresa por um com a classe `card-xp__mark--logo` e `style="mask-image: url(assets/logos/arquivo.png)"` (veja o exemplo da CMCorp). A logo é tingida com a cor do tema. Também é possível usar um SVG inline com a classe `card-xp__mark--icon` (como no card da Fulllab).
-- **Capturas dos projetos** (prévia flutuante ao passar o mouse): salve a imagem em `assets/projects/` (paisagem, ~900px de largura, WebP) e adicione `data-image="assets/projects/arquivo.webp"` ao `<li class="work__item">`. Para uma logo na prévia, use `data-logo` e `data-logo-alt`.
+- **Capturas dos projetos** (prévia flutuante ao passar o mouse): salve a imagem em `assets/projects/` (~900px de largura, WebP; ela aparece ao fundo, cortada e tingida pela cor do projeto) e adicione `data-image="assets/projects/arquivo.webp"` ao `<li class="work__item">`. Para uma logo na prévia, use `data-logo` e `data-logo-alt`.
 - **Fontes**: Fraunces (títulos), Inter (texto) e JetBrains Mono (detalhes), carregadas do Google Fonts.
 
 ## Publicação
