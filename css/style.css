@@ -336,7 +336,7 @@ body.is-ready .hero__sub { opacity: 1; transform: none; }
 
 .card-xp {
   position: relative; flex: none;
-  width: clamp(300px, 34vw, 520px); height: min(62vh, 560px);
+  width: clamp(300px, 34vw, 520px); min-height: min(62vh, 560px);
   padding: clamp(28px, 3vw, 44px);
   background: var(--surface);
   border: 1px solid var(--line);
@@ -362,7 +362,7 @@ body.is-ready .hero__sub { opacity: 1; transform: none; }
 .card-xp__badge { z-index: 1; }
 .card-xp__mark {
   position: absolute; left: -10%; bottom: -12%; z-index: 0;
-  width: 72%; height: 72%;
+  width: 85%; height: 85%;
   display: flex; align-items: flex-end; justify-content: flex-start;
   padding: 0;
   pointer-events: none; user-select: none;
