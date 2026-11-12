@@ -217,6 +217,18 @@
     loop();
   }
 
+  /* ---------- Tradução dos depoimentos ---------- */
+  $$("[data-translate]").forEach((btn) => {
+    const quote = document.getElementById(btn.dataset.translate);
+    const label = $(".testimonial__translate-label", btn);
+    btn.addEventListener("click", () => {
+      const toPt = btn.getAttribute("aria-pressed") !== "true";
+      $$(".testimonial__text", quote).forEach((t) => { t.hidden = (t.dataset.lang === "pt") !== toPt; });
+      btn.setAttribute("aria-pressed", String(toPt));
+      label.textContent = toPt ? "Ver original em inglês" : "Traduzir para português";
+    });
+  });
+
   /* ---------- Intro (no fim: depende de tudo acima já inicializado) ---------- */
   const start = () => {
     body.classList.remove("is-loading");
