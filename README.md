@@ -15,7 +15,7 @@ Desenvolvido em **HTML, CSS e JavaScript puros**, sem frameworks, bibliotecas ou
 | 02 | Experiência | Linha do tempo com as empresas, de 2006 até hoje |
 | 03 | Competências | Tecnologias, pagamentos e finanças, arquitetura e práticas |
 | 04 | Projetos | Projetos desenvolvidos e mantidos, incluindo o AutoTEF (Stone) e o app de vendas do Grupo Mateus |
-| 05 | Depoimentos | Recomendações de quem trabalhou comigo, com tradução do inglês |
+| 05 | Depoimentos | Recomendações de Claudia Mere (com tradução do inglês) e Daniel Fontoura |
 | 06 | Formação & certificações | Formação acadêmica, certificações, palestras, idiomas e cursos |
 | 07 | Contato | E-mail, LinkedIn, GitHub, YouTube e WhatsApp |
 
