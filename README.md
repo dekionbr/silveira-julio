@@ -49,6 +49,7 @@ python3 -m http.server 8080
 
 - **Textos**: todo o conteúdo está em `index.html`.
 - **Cores**: as variáveis de cada tema ficam no início de `css/style.css`, em `:root[data-theme="dark"]` e `:root[data-theme="light"]`.
+- **Logos das empresas** (marca d'água nos cards de experiência): salve o arquivo em `assets/logos/` (de preferência SVG com fundo transparente) e, no `index.html`, troque o monograma do `<span class="card-xp__mark">` correspondente adicionando a classe `card-xp__mark--logo` e `style="--logo: url(assets/logos/arquivo.svg)"`. A logo é tingida automaticamente com a cor do tema.
 - **Fontes**: Fraunces (títulos), Inter (texto) e JetBrains Mono (detalhes), carregadas do Google Fonts.
 
 ## Publicação
