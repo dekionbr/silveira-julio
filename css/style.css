@@ -491,6 +491,13 @@ body.is-ready .hero__sub { opacity: 1; transform: none; }
 .work__preview.is-visible { opacity: 1; }
 .work__preview-tag { font: 500 10px/1 var(--f-mono); letter-spacing: .15em; text-transform: uppercase; color: #fff; position: relative; z-index: 1; }
 .work__preview-title { font: 300 30px/1.05 var(--f-display); color: #fff; position: relative; z-index: 1; }
+.work__preview-logo {
+  position: relative; z-index: 1; align-self: flex-start;
+  background: #fff; border-radius: 6px; padding: 10px 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+}
+.work__preview-logo[hidden] { display: none; }
+.work__preview-logo img { display: block; height: 26px; width: auto; }
 @media (hover: none), (max-width: 860px) { .work__preview { display: none; } }
 
 @media (max-width: 860px) {

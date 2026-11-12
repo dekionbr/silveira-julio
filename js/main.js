@@ -194,6 +194,7 @@
   const preview = $("#workPreview");
   const pTag = $("#workPreviewTag");
   const pTitle = $("#workPreviewTitle");
+  const pLogo = $("#workPreviewLogo");
   const list = $("#workList");
   if (finePointer && preview) {
     let px = 0, py = 0, tx = 0, ty = 0, active = false;
@@ -203,6 +204,9 @@
         preview.style.setProperty("--h", item.dataset.hue);
         pTag.textContent = item.dataset.tag;
         pTitle.textContent = $(".work__name", item).textContent;
+        const logo = item.dataset.logo;
+        pLogo.hidden = !logo;
+        if (logo) { const img = $("img", pLogo); img.src = logo; img.alt = item.dataset.logoAlt || ""; }
         preview.classList.add("is-visible");
         active = true;
       });
