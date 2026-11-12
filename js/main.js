@@ -211,7 +211,9 @@
         if (logo) { const img = $("img", pLogo); img.src = logo; img.alt = item.dataset.logoAlt || ""; }
         const image = item.dataset.image;
         preview.classList.toggle("has-image", !!image);
-        preview.style.backgroundImage = image ? `url("${image}")` : "";
+        // URL absoluta: evita diferenças entre navegadores ao resolver url() dentro de variável CSS
+        if (image) preview.style.setProperty("--img", `url("${new URL(image, document.baseURI).href}")`);
+        else preview.style.removeProperty("--img");
         preview.classList.add("is-visible");
         active = true;
       });
