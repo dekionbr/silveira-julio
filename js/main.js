@@ -199,6 +199,8 @@
   if (finePointer && preview) {
     let px = 0, py = 0, tx = 0, ty = 0, active = false;
     list.addEventListener("pointermove", (e) => { tx = e.clientX; ty = e.clientY; });
+    // pré-carrega as capturas para a prévia não aparecer vazia
+    $$(".work__item[data-image]", list).forEach((item) => { const i = new Image(); i.src = item.dataset.image; });
     $$(".work__item", list).forEach((item) => {
       item.addEventListener("pointerenter", () => {
         preview.style.setProperty("--h", item.dataset.hue);
@@ -207,6 +209,9 @@
         const logo = item.dataset.logo;
         pLogo.hidden = !logo;
         if (logo) { const img = $("img", pLogo); img.src = logo; img.alt = item.dataset.logoAlt || ""; }
+        const image = item.dataset.image;
+        preview.classList.toggle("has-image", !!image);
+        preview.style.backgroundImage = image ? `url("${image}")` : "";
         preview.classList.add("is-visible");
         active = true;
       });

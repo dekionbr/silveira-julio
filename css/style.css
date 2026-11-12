@@ -491,6 +491,14 @@ body.is-ready .hero__sub { opacity: 1; transform: none; }
   background-size: 28px 28px;
 }
 .work__preview.is-visible { opacity: 1; }
+/* prévia com captura de tela do projeto: formato paisagem, com degradê para o texto */
+.work__preview.has-image {
+  width: clamp(300px, 28vw, 440px); aspect-ratio: 3 / 2;
+  background-size: cover; background-position: center top; background-repeat: no-repeat;
+}
+.work__preview.has-image::after {
+  background: linear-gradient(180deg, rgba(6, 12, 26, .55) 0%, rgba(6, 12, 26, 0) 35%, rgba(6, 12, 26, 0) 50%, rgba(6, 12, 26, .85) 100%);
+}
 .work__preview-tag { font: 500 10px/1 var(--f-mono); letter-spacing: .15em; text-transform: uppercase; color: #fff; position: relative; z-index: 1; }
 .work__preview-title { font: 300 30px/1.05 var(--f-display); color: #fff; position: relative; z-index: 1; }
 .work__preview-logo {
