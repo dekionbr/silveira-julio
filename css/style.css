@@ -572,17 +572,17 @@ body.is-ready .hero__sub { opacity: 1; transform: none; }
 .testimonial:not(.testimonial--cta) .testimonial__quote { margin-bottom: clamp(28px, 4vw, 48px); }
 .testimonial:not(.testimonial--featured):not(.testimonial--cta) .testimonial__text { font-size: clamp(20px, 1.7vw, 26px); }
 .testimonial:not(.testimonial--featured):not(.testimonial--cta) .testimonial__mark { font-size: clamp(100px, 10vw, 160px); }
-.testimonial:not(.testimonial--featured):not(.testimonial--cta) .testimonial__quote { padding-right: 0; }
 /* convite: faixa inteira abaixo dos depoimentos */
+/* convite: card tracejado ao lado do último depoimento */
 .testimonial--cta {
-  grid-column: 1 / -1;
-  display: flex; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px 28px;
-  padding-block: clamp(22px, 2.6vw, 32px);
+  display: flex; flex-direction: column; justify-content: space-between; gap: 28px;
   background: transparent; border-style: dashed;
 }
+.testimonial__role a { color: var(--accent); transition: opacity .3s; }
+.testimonial__role a:hover { opacity: .75; }
 .testimonial__cta-text { font: 300 clamp(20px, 1.8vw, 28px)/1.3 var(--f-display); color: var(--ink-dim); }
 .testimonial__cta-link {
-  align-self: center; font: 400 11px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent);
+  align-self: flex-start; font: 400 11px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent);
 }
 .testimonial__cta-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 @media (max-width: 960px) { .testimonials__grid { grid-template-columns: 1fr; } }
