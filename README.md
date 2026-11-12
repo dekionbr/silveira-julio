@@ -1,6 +1,6 @@
 # Julio Silveira — Portfólio
 
-Site institucional e portfólio de **Julio Cesar Domingos da Silveira Jr.**, Backend Engineer com mais de 20 anos de experiência em .NET (C#), Node.js, Python e Go, APIs, microsserviços e sistemas de pagamento.
+Site institucional e portfólio de **Julio Cesar D. da Silveira Jr.**, Backend Engineer com mais de 20 anos de experiência em .NET (C#), Node.js, Python e Go, APIs, microsserviços e sistemas de pagamento.
 
 🔗 **Acesse:** https://silveirajulio.com.br
 
