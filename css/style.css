@@ -376,11 +376,13 @@ body.is-ready .hero__sub { opacity: 1; transform: none; }
 /* ícone do segmento (usado enquanto não houver logo oficial) */
 .card-xp__mark--icon svg { height: 100%; width: auto; max-width: 100%; stroke-width: 1.1; }
 .card-xp__mark--icon { padding: 0; }
-/* logo oficial: defina --logo: url(assets/logos/arquivo.svg) no elemento; a cor segue o tema */
+/* logo oficial como silhueta: defina mask-image no próprio elemento (style); a cor segue o tema */
 .card-xp__mark--logo {
+  width: 105%; bottom: -8%;
   font-size: 0; background: currentColor;
-  -webkit-mask: var(--logo) left bottom / contain no-repeat content-box;
-  mask: var(--logo) left bottom / contain no-repeat content-box;
+  -webkit-mask-position: left bottom; mask-position: left bottom;
+  -webkit-mask-size: contain; mask-size: contain;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
 }
 .card-xp__year { font: 400 12px/1 var(--f-mono); letter-spacing: .12em; color: var(--accent); }
 .card-xp__company { font: 300 clamp(38px, 4.2vw, 68px)/1 var(--f-display); letter-spacing: -.03em; margin: auto 0 12px; }

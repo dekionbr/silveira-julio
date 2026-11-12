@@ -49,7 +49,7 @@ python3 -m http.server 8080
 
 - **Textos**: todo o conteúdo está em `index.html`.
 - **Cores**: as variáveis de cada tema ficam no início de `css/style.css`, em `:root[data-theme="dark"]` e `:root[data-theme="light"]`.
-- **Logos das empresas** (marca d'água nos cards de experiência): salve o arquivo em `assets/logos/` (de preferência SVG com fundo transparente) e, no `index.html`, troque o monograma do `<span class="card-xp__mark">` correspondente adicionando a classe `card-xp__mark--logo` e `style="--logo: url(assets/logos/arquivo.svg)"`. A logo é tingida automaticamente com a cor do tema. Enquanto não houver logo, o card mostra um ícone do segmento da empresa ([Lucide](https://lucide.dev), licença ISC).
+- **Logos das empresas** (marca d'água nos cards de experiência): salve em `assets/logos/` uma silhueta com fundo transparente (SVG ou PNG grande) e, no `index.html`, troque o `<span class="card-xp__mark">` da empresa por um com a classe `card-xp__mark--logo` e `style="mask-image: url(assets/logos/arquivo.png)"` (veja o exemplo da CMCorp). A logo é tingida com a cor do tema. Sem logo, o card mostra um ícone do segmento ([Lucide](https://lucide.dev), licença ISC).
 - **Fontes**: Fraunces (títulos), Inter (texto) e JetBrains Mono (detalhes), carregadas do Google Fonts.
 
 ## Publicação
