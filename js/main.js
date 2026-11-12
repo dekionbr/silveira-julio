@@ -72,32 +72,6 @@
     Promise.all([fonts, new Promise((r) => setTimeout(r, 1250))]).then(start);
   }
 
-  /* ---------- Cursor personalizado ---------- */
-  const cursor = $("#cursor");
-  const cursorLabel = $("#cursorLabel");
-  if (finePointer) {
-    let mx = -100, my = -100, cx = -100, cy = -100;
-    window.addEventListener("pointermove", (e) => { mx = e.clientX; my = e.clientY; }, { passive: true });
-    const loop = () => {
-      cx += (mx - cx) * 0.2;
-      cy += (my - cy) * 0.2;
-      cursor.style.transform = `translate3d(${cx - 5}px, ${cy - 5}px, 0)`;
-      requestAnimationFrame(loop);
-    };
-    loop();
-
-    document.addEventListener("pointerover", (e) => {
-      const t = e.target.closest("[data-cursor], a, button");
-      if (!t) return;
-      cursor.classList.add("is-hover");
-      cursorLabel.textContent = t.dataset.cursor || "";
-    });
-    document.addEventListener("pointerout", (e) => {
-      const t = e.target.closest("[data-cursor], a, button");
-      if (t && !t.contains(e.relatedTarget)) cursor.classList.remove("is-hover");
-    });
-  }
-
   /* ---------- Luz do hero segue o ponteiro ---------- */
   const hero = $("#hero");
   const spot = $("#heroSpot");
