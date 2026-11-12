@@ -103,6 +103,7 @@
     io.observe(el);
   });
   $$("[data-count]").forEach((el) => io.observe(el));
+  $$(".card-xp").forEach((el) => io.observe(el));
   $$(".contact__title").forEach((el) => {
     $$(".char", el).forEach((c, i) => (c.style.transitionDelay = `${i * 0.025}s`));
     io.observe(el);
