@@ -60,5 +60,5 @@ git push origin HEAD:gh-pages
 
 ## Contato
 
-- LinkedIn: [julio-silveira](https://br.linkedin.com/in/julio-silveira-08314526)
+- LinkedIn: [julio-silveira-dev](https://www.linkedin.com/in/julio-silveira-dev/)
 - GitHub: [@dekionbr](https://github.com/dekionbr)
