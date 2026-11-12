@@ -14,7 +14,7 @@ Desenvolvido em **HTML, CSS e JavaScript puros**, sem frameworks, bibliotecas ou
 | 01 | Sobre | Perfil profissional e números de destaque |
 | 02 | Experiência | Linha do tempo com as empresas, de 2006 até hoje |
 | 03 | Competências | Tecnologias, pagamentos e finanças, arquitetura e práticas |
-| 04 | Projetos | Projetos web desenvolvidos e mantidos |
+| 04 | Projetos | Projetos desenvolvidos e mantidos, incluindo o AutoTEF (Stone) |
 | 05 | Depoimentos | Recomendações de quem trabalhou comigo, com tradução do inglês |
 | 06 | Formação & certificações | Formação acadêmica, certificações, palestras, idiomas e cursos |
 | 07 | Contato | E-mail, LinkedIn, GitHub, YouTube e WhatsApp |
