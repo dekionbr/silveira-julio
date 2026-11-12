@@ -57,21 +57,6 @@
     el.innerHTML = words.map((w) => `<span class="word">${w}</span>`).join(" ");
   });
 
-  /* ---------- Intro ---------- */
-  const start = () => {
-    body.classList.remove("is-loading");
-    body.classList.add("is-ready");
-    onScroll();
-  };
-  let introSeen = false;
-  try { introSeen = sessionStorage.getItem("introSeen") === "1"; sessionStorage.setItem("introSeen", "1"); } catch (e) { /* ignorado */ }
-  if (reduceMotion || introSeen) {
-    start();
-  } else {
-    const fonts = document.fonts ? document.fonts.ready : Promise.resolve();
-    Promise.all([fonts, new Promise((r) => setTimeout(r, 1250))]).then(start);
-  }
-
   /* ---------- Luz do hero segue o ponteiro ---------- */
   const hero = $("#hero");
   const spot = $("#heroSpot");
@@ -230,6 +215,21 @@
       requestAnimationFrame(loop);
     };
     loop();
+  }
+
+  /* ---------- Intro (no fim: depende de tudo acima já inicializado) ---------- */
+  const start = () => {
+    body.classList.remove("is-loading");
+    body.classList.add("is-ready");
+    onScroll();
+  };
+  let introSeen = false;
+  try { introSeen = sessionStorage.getItem("introSeen") === "1"; sessionStorage.setItem("introSeen", "1"); } catch (e) { /* ignorado */ }
+  if (reduceMotion || introSeen) {
+    start();
+  } else {
+    const fonts = document.fonts ? document.fonts.ready : Promise.resolve();
+    Promise.all([fonts, new Promise((r) => setTimeout(r, 1250))]).then(start);
   }
 
   /* ---------- Ano ---------- */

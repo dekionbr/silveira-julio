@@ -58,6 +58,8 @@ O site é publicado pelo **GitHub Pages** a partir do branch `gh-pages`. Para at
 git push origin HEAD:gh-pages
 ```
 
+Ao alterar `css/style.css` ou `js/main.js`, atualize o parâmetro `?v=` nos links do `index.html` para que os navegadores não usem a versão antiga em cache.
+
 ## Contato
 
 - LinkedIn: [julio-silveira-dev](https://www.linkedin.com/in/julio-silveira-dev/)
