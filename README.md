@@ -1,6 +1,6 @@
 # Julio Silveira — Portfólio
 
-Site institucional e portfólio de **Julio Cesar Domingos da Silveira Jr.**, Senior Software Engineer e Desenvolvedor Fullstack com quase 20 anos de experiência em .NET/C#, soluções de pagamento, APIs e aplicações web.
+Site institucional e portfólio de **Julio Cesar Domingos da Silveira Jr.**, Backend Engineer com mais de 20 anos de experiência em .NET (C#), Node.js, Python e Go, APIs, microsserviços e sistemas de pagamento.
 
 🔗 **Acesse:** https://dekionbr.github.io/silveira-julio/
 
@@ -12,11 +12,11 @@ Desenvolvido em **HTML, CSS e JavaScript puros**, sem frameworks, bibliotecas ou
 |---|-------|----------|
 | — | Início | Nome, cargo e principais áreas de atuação |
 | 01 | Sobre | Perfil profissional e números de destaque |
-| 02 | Experiência | Linha do tempo com as empresas, de 2007 até hoje |
-| 03 | Competências | Tecnologias, domínios de negócio, gestão e arquitetura |
+| 02 | Experiência | Linha do tempo com as empresas, de 2006 até hoje |
+| 03 | Competências | Tecnologias, pagamentos e finanças, arquitetura e práticas |
 | 04 | Projetos | Projetos web desenvolvidos e mantidos |
-| 05 | Formação & certificações | Formação acadêmica, certificações, palestras e cursos |
-| 06 | Contato | E-mail, LinkedIn, GitHub e WhatsApp |
+| 05 | Formação & certificações | Formação acadêmica, certificações, palestras, idiomas e cursos |
+| 06 | Contato | E-mail, LinkedIn, GitHub, YouTube e WhatsApp |
 
 ## Recursos
 
@@ -62,3 +62,4 @@ git push origin HEAD:gh-pages
 
 - LinkedIn: [julio-silveira-dev](https://www.linkedin.com/in/julio-silveira-dev/)
 - GitHub: [@dekionbr](https://github.com/dekionbr)
+- YouTube: [@JulioSilveiraDev](https://www.youtube.com/@JulioSilveiraDev)
