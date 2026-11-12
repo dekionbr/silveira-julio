@@ -1,27 +1,41 @@
-# SilveiraJulio
+# Julio Silveira — Portfólio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
+Site institucional/portfólio de **Julio Cesar Domingos da Silveira Jr.**, Senior Software Engineer e Desenvolvedor Fullstack.
 
-## Development server
+Feito em **HTML, CSS e JavaScript puro**, sem frameworks nem etapa de build.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Conceito
 
-## Code scaffolding
+Design cinematográfico, como um filme em cenas:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Abertura**: contagem regressiva de película (3·2·1) e barras de *letterbox* que se abrem
+- **Grão de filme** e vinheta sobre toda a página, com feixes de luz no hero
+- **Cena 01 – Sobre**: texto que "acende" palavra por palavra ao rolar e números animados
+- **Cena 02 – Trajetória**: linha do tempo horizontal fixada na rolagem (vertical no celular)
+- **Cena 03 – Stack**: o "elenco técnico"
+- **Cena 04 – Filmografia**: projetos com prévia flutuante que segue o cursor
+- **Cena 05 – Formação, certificados e palestra**
+- **Cena 06 – Créditos finais**: contato
 
-## Build
+Respeita `prefers-reduced-motion` e é responsivo.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Estrutura
 
-## Running unit tests
+```
+index.html
+css/style.css
+js/main.js
+assets/certificado-aspnetcore-angular.pdf
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Rodando localmente
 
-## Running end-to-end tests
+Basta abrir o `index.html` no navegador, ou servir a pasta:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```bash
+python3 -m http.server 8080
+```
 
-## Further help
+## Publicação
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Por ser estático, pode ser publicado diretamente no **GitHub Pages** (Settings → Pages → branch `master`, pasta `/root`), Netlify ou Vercel.
