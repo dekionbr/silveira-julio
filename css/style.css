@@ -572,10 +572,10 @@ body.is-ready .hero__sub { opacity: 1; transform: none; }
 .testimonial:not(.testimonial--cta) .testimonial__quote { margin-bottom: clamp(28px, 4vw, 48px); }
 .testimonial:not(.testimonial--featured):not(.testimonial--cta) .testimonial__text { font-size: clamp(20px, 1.7vw, 26px); }
 .testimonial:not(.testimonial--featured):not(.testimonial--cta) .testimonial__mark { font-size: clamp(100px, 10vw, 160px); }
-/* convite: faixa inteira abaixo dos depoimentos */
-/* convite: card tracejado ao lado do último depoimento */
+/* convite: faixa tracejada na largura toda, abaixo dos depoimentos */
 .testimonial--cta {
-  display: flex; flex-direction: column; justify-content: space-between; gap: 28px;
+  grid-column: 1 / -1;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px;
   background: transparent; border-style: dashed;
 }
 .testimonial__role a { color: var(--accent); transition: opacity .3s; }
